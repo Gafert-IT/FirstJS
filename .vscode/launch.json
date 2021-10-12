@@ -8,7 +8,9 @@
             "type": "pwa-msedge",
             "request": "launch",
             "name": "Open index.html",
-            "file": "d:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\ErsteSchritteInJS\\index.html"
+            // "file": "d:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\ErsteSchritteInJS\\index.html"
+            // "file": "d:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\ExerciseOne\\default.html"
+            "file": "d:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\ExerciseTwo\\default.html"
         }
     ]
 }
