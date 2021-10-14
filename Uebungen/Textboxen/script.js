@@ -24,49 +24,44 @@ function berechnen(){
     let gebDat = Date.parse(document.getElementById('gebDat').value.trim());      
     let heute = Date.now();
     let ergebnis = heute - gebDat;
-    alert(ergebnis + 'ms since your B-Day. You are f*ckin old!');
+    let years = (ergebnis/31536000000).toFixed();
+    let months = ((ergebnis%31536000000)/2629800000).toFixed();
+    let weeks = (((ergebnis%31536000000)%2629800000)/604800016.56).toFixed();
+    let days = ((((ergebnis%31536000000)%2629800000)%604800016.56)/86400000).toFixed();
+    alert(`${years} years, ${months} month(s), ${weeks}week(s) and ${days} day(s) since your Birth.\r\rYou are f*ckin old!`);
 }
 
 function emailCheck(){
     let mail = document.getElementById('mail').value.trim();
-    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 /*  if (!mail.includes('@')) {  */        
-    if (!regex.test(mail)) {
-        alert('email address is not valid!');
+    if (!regex.test(mail) && date != null) {
+        alert('This is not a valid email address!');
     }
 }
 
 function telCheck(){
     let telNr = document.getElementById('tel').value.trim();
-    //let regex = /\\|\/|\-|\s+/gi;
-    let regex = /[^0-9]/gi;
+    let regex = /[^0-9]/g;
     telNr = telNr.replace(regex, '');
     if (isNaN(telNr) && date != null) {
-        alert('Telephone number is not valid!')
+        alert('This is not a valid phone number!')
     }
     document.getElementById('tel').value = telNr;
 }
 
 function nameCheck(){
     let name = document.getElementById('name').value.trim();
-    let minus = 0;
-    for (let index = 0; index < name.length; index++) {
-        let c = name[index];
-        if (!isNaN(c - parseInt(c))) {
-            alert('name must not contain a number!');
-        }
-        else if (c == '-') {
-            minus++;
-        }
-    }
-    if (minus > 2) {
-        alert("name must only contain a max. of 2 '-'!")
-    }
+    let regex = /^([a-zß-ü]+(['-][a-zß-ü]+)?\s?)*?$/i;
+    
+    if (!regex.test(name)) {
+         alert("This is not a valid name!")    
+    }   
 }
 
 function checkValidDate(){
-    let date = Date.parse(document.getElementById('gebDat').value.trim());
+    let date = Date.parse(document.getElementById('gebDat').value);
     if (isNaN(date) && date != null) {
-        alert('date is not valid!')
+        alert('This is not a valid date!')
     }
 }
