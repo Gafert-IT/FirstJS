@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textboxen Uebung</title>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td><input type="name" name='name' id='name' onblur="nameCheck()"></td>
+        </tr>
+        <tr>
+            <td>Telefon: </td>
+            <td><input type="text" name="tel" id="tel" onblur="telCheck()"></td>
+        </tr>
+        <tr>
+            <td>E-Mail: </td>
+            <td><input type="email" name="mail" id="mail" onblur="emailCheck()"></td>
+        </tr>
+        <tr>
+            <td>Adresse: </td>
+            <td><input type="text" name='address'; id='address'></td>
+        </tr>
+        <tr>
+            <td>Geburtsdatum: </td>
+            <!--<td><input type="date" name="gebDat" id="gebDat" value="1983-08-16" onblur="checkValidDate()"></td>-->
+            <td><input type="date" name="gebDat" id="gebDat" onblur="checkValidDate()" ></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" onclick="send()" >absenden</button>
+                <button onclick="berechnen()">berechnen</button>
+            </td>
+        </tr>
+    </table>
+    
+    <script src="script.js"></script>
+</body>
+</html>
