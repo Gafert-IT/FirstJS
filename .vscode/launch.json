@@ -12,7 +12,9 @@
             //"file": "d:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\ExerciseOne\\default.html"
             //"file": "d:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\ExerciseTwo\\default.html"
             //"file": "d:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\ImageGallery\\index.html"
-            "file": "D:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\Uebungen\\Textboxen\\index.html"
+            //"file": "D:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\Uebungen\\Textboxen\\index.html"
+            // "file": "D:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\node\\webserver.js"
+            "file": "D:\\OneDrive - LG-Academy\\Programmiergrundlagen\\Beck\\FirstJS\\expresswebserver\\webserver.js"
         }
     ]
 }
