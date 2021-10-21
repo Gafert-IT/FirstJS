@@ -7,10 +7,10 @@ console.log('Server running at http://localhost:8080/');
 
 function anfrage(request, response){
     let urlParts = urlModule.parse(request.url,true);
-    let vorname = urlParts.qery.vorname;
+    let vorname = urlParts.query.vorname;
 
     response.writeHead(200,{'Content-Type': 'Text-Plain'});
-    response.end('Hello'+ vorname +'Hello from Node.JS\n');
+    response.end('Hello '+ vorname +' from Node.JS\n');
     console.log('Handled request');
 }
 
